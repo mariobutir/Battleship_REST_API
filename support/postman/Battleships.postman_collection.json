@@ -1,0 +1,206 @@
+{
+  "info": {
+    "_postman_id": "6abd91d6-6cd5-430b-812f-98cb6699dc0a",
+    "name": "Battleships",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "US01 Create player (imunic)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\":\"imunic\",\n\t\"email\":\"ivan.munic@ag04.com\"\n}"
+        },
+        "url": {
+          "raw": "{{server_base}}/battleship-api/player",
+          "host": [
+            "{{server_base}}"
+          ],
+          "path": [
+            "battleship-api",
+            "player"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "US01 Create player (agulin)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\":\"agulin\",\n\t\"email\":\"ante.gulin@ag04.com\"\n}"
+        },
+        "url": {
+          "raw": "{{server_base}}/battleship-api/player",
+          "host": [
+            "{{server_base}}"
+          ],
+          "path": [
+            "battleship-api",
+            "player"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "US02 Get player (1)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{server_base}}/battleship-api/player/1",
+          "host": [
+            "{{server_base}}"
+          ],
+          "path": [
+            "battleship-api",
+            "player",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "US02 Get players",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{server_base}}/battleship-api/player/list",
+          "host": [
+            "{{server_base}}"
+          ],
+          "path": [
+            "battleship-api",
+            "player",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "US03 Challenge player (1-> 2)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"player_id\": 1\n}"
+        },
+        "url": {
+          "raw": "{{server_base}}/battleship-api/player/2/game",
+          "host": [
+            "{{server_base}}"
+          ],
+          "path": [
+            "battleship-api",
+            "player",
+            "2",
+            "game"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "US04 Game status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{server_base}}/battleship-api/player/1/game/1",
+          "host": [
+            "{{server_base}}"
+          ],
+          "path": [
+            "battleship-api",
+            "player",
+            "1",
+            "game",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "US05 My games (1)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{server_base}}/battleship-api/player/1/game/list",
+          "host": [
+            "{{server_base}}"
+          ],
+          "path": [
+            "battleship-api",
+            "player",
+            "1",
+            "game",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "US06 Fire salvo (player 1)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"salvo\": [\"1xC\", \"2xC\", \"3xC\", \"4xC\", \"5xC\", \"1xB\", \"2xB\", \"3xB\",\"4xB\",\"5xB\"]\n}"
+        },
+        "url": {
+          "raw": "{{server_base}}/battleship-api/player/2/game/1",
+          "host": [
+            "{{server_base}}"
+          ],
+          "path": [
+            "battleship-api",
+            "player",
+            "2",
+            "game",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
